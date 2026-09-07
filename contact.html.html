@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mawasiliano | Golden Path Tuition Center</title>
+
+    <meta name="description"
+        content="Wasiliana na Golden Path Tuition Center, Msaranga Darajani, Moshi. Pata taarifa za usajili, ada, ratiba na masomo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+<
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f6f7fa;
+            color: #172033;
+            line-height: 1.7;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(6, 20, 43, .97);
+            backdrop-filter: blur(12px);
+
+            padding: 16px 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #f4bd3f;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #f4bd3f;
+        }
+
+        .menu-btn {
+            display: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 480px;
+
+            padding: 90px 7%;
+
+            background:
+                linear-gradient(
+                    rgba(4, 17, 37, .91),
+                    rgba(4, 17, 37, .94)
+                ),
+                url("images/golden-path.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            color: white;
+        }
+
+        .label {
+            color: #f4bd3f;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(40px, 6vw, 68px);
+            line-height: 1.08;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #f4bd3f;
+        }
+
+        .hero p {
+            color: #dce3ee;
+            max-width: 700px;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 800;
+            transition: .3s;
+        }
+
+        .btn-gold {
+            background: #f4bd3f;
+            color: #071a38;
+        }
+
+        .btn-gold:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #071a38;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            padding: 90px 7%;
+            background: white;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px;
+        }
+
+        .section-heading h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 38px;
+            color: #081b3a;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #687386;
+        }
+
+        .contact-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .contact-card {
+            background: #f7f8fa;
+            border: 1px solid #e5e8ed;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.08);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+
+            background: #081b3a;
+            color: #f4bd3f;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 18px;
+
+            font-size: 25px;
+        }
+
+        .contact-card h3 {
+            font-family: "Poppins", sans-serif;
+            color: #081b3a;
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: #687386;
+            font-size: 14px;
+        }
+
+        .contact-card a {
+            color: #b27b00;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+
+        /* ================= MAIN CONTACT AREA ================= */
+
+        .contact-area {
+            padding: 90px 7%;
+            background: #f6f7fa;
+        }
+
+        .contact-container {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 40px;
+        }
+
+
+        /* ================= FORM ================= */
+
+        .form-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+
+            border: 1px solid #e4e7ec;
+
+            box-shadow: 0 10px 35px rgba(0,0,0,.05);
+        }
+
+        .form-box h2 {
+            font-family: "Poppins", sans-serif;
+            color: #081b3a;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .form-box > p {
+            color: #687386;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 7px;
+            color: #26354d;
+        }
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+
+            border: 1px solid #dce1e8;
+            border-radius: 8px;
+
+            padding: 13px 14px;
+
+            font-family: inherit;
+            font-size: 14px;
+
+            outline: none;
+            transition: .3s;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus,
+        .input-group select:focus {
+            border-color: #d5a21d;
+            box-shadow: 0 0 0 3px rgba(244,189,63,.15);
+        }
+
+        .input-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .send-btn {
+            width: 100%;
+
+            border: none;
+            border-radius: 8px;
+
+            padding: 15px;
+
+            background: #081b3a;
+            color: white;
+
+            font-family: inherit;
+            font-weight: 800;
+            font-size: 15px;
+
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .send-btn:hover {
+            background: #f4bd3f;
+            color: #081b3a;
+        }
+
+
+        /* ================= LOCATION ================= */
+
+        .location-box {
+            background: #081b3a;
+            color: white;
+
+            padding: 40px;
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        .location-box h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .location-box > p {
+            color: #cbd4e0;
+            margin-bottom: 25px;
+        }
+
+        .location-details {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .location-details li {
+            margin: 15px 0;
+            color: #e0e5ed;
+        }
+
+        .location-details strong {
+            color: #f4bd3f;
+        }
+
+        .map {
+            width: 100%;
+            height: 250px;
+            border: 0;
+            border-radius: 12px;
+        }
+
+
+        /* ================= HOURS ================= */
+
+        .hours {
+            padding: 80px 7%;
+            background: white;
+        }
+
+        .hours-container {
+            max-width: 900px;
+            margin: auto;
+
+            background: #081b3a;
+            border-radius: 20px;
+            padding: 40px;
+
+            color: white;
+        }
+
+        .hours-container h2 {
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #f4bd3f;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.12);
+        }
+
+        .hours-row:last-child {
+            border-bottom: none;
+        }
+
+        .hours-row span:last-child {
+            color: #f4bd3f;
+            font-weight: 700;
+        }
+
+
+        /* ================= CTA ================= */
+
+        .cta {
+            padding: 85px 7%;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f4bd3f,
+                    #e5a91e
+                );
+        }
+
+        .cta h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 40px;
+            color: #071a38;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            max-width: 680px;
+            margin: auto auto 25px;
+            color: #172033;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+
+            background: #081b3a;
+            color: white;
+
+            padding: 15px 30px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+            font-weight: 800;
+
+            transition: .3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: white;
+            color: #081b3a;
+            transform: translateY(-3px);
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #050f20;
+            color: white;
+
+            padding: 50px 7%;
+            text-align: center;
+        }
+
+        footer h3 {
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 8px;
+        }
+
+        footer h3 span {
+            color: #f4bd3f;
+        }
+
+        footer p {
+            color: #aeb8c7;
+            font-size: 14px;
+            margin: 4px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: #cbd4e0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #f4bd3f;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 850px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+                top: 70px;
+                left: 0;
+
+                width: 100%;
+
+                background: #081b3a;
+
+                flex-direction: column;
+
+                padding: 25px 7%;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 570px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .section-heading h2,
+            .form-box h2,
+            .location-box h2,
+            .cta h2 {
+                font-size: 30px;
+            }
+
+            .hours-container {
+                padding: 28px 20px;
+            }
+
+            .hours-row {
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    
+    </nav>
+    <a href="index.html" class="logo">GOLDEN PATH</a>
+
+    <ul class="nav-links">
+        <li><a href="index.html.html">Home</a></li>
+        <li><a href="about.html.html">About Us</a></li>
+        <li><a href="services.html.html">Our Services</a></li>
+        <li><a href="videos.html.html">Videos</a></li>
+        <li><a href="contact.html.html">Mawasiliano</a></li>
+    </ul>
+</nav>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="label">
+                Get In Touch
+            </div>
+
+            <h1>
+                Tuanze Safari ya
+                <span>Mafanikio.</span>
+            </h1>
+
+            <p>
+                Una swali kuhus<nav>
+
+        <a href="index.html" class="logo">
+            GOLDEN <span>PATH</span>
+        </a>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+u usajili, ada, ratiba au programu?
+                Wasiliana nasi leo. Golden Path Tuition Center
+                ipo tayari kukusaidia.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="https://wa.me/255617975946"
+                    class="btn btn-gold">
+
+                    WhatsApp Sasa
+
+                </a>
+
+                <a
+                    href="tel:+255617975946"
+                    class="btn btn-outline">
+
+                    Piga Simu
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT CARDS ================= -->
+
+    <section class="contact">
+
+        <div class="section-heading">
+
+            <div class="label">
+                Contact Golden Path
+            </div>
+
+            <h2>
+                Tupo Tayari Kuzungumza Nawe
+            </h2>
+
+            <p>
+                Chagua njia yoyote hapa chini ili kupata taarifa
+                unazohitaji kuhusu Golden Path Tuition Center.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <h3>
+                    Simu
+                </h3>
+
+                <p>
+                    Piga simu moja kwa moja
+                </p>
+
+                <a href="tel:+255617975946">
+                    0617 975 946
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    💬
+                </div>
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+                <p>
+                    Tuma ujumbe kupitia WhatsApp
+                </p>
+
+                <a href="https://wa.me/255617975946">
+                    Chat WhatsApp
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Msaranga – Darajani, Moshi
+                    <br>
+                    Tunahaki Building
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FORM + LOCATION ================= -->
+
+    <section class="contact-area">
+
+        <div class="contact-container">
+
+
+            <!-- FORM -->
+
+            <div class="form-box">
+
+                <h2>
+                    Tutumie Ujumbe
+                </h2>
+
+                <p>
+                    Jaza taarifa zako hapa chini.
+                </p>
+
+
+                <form onsubmit="sendWhatsApp(); return false;">
+
+                    <div class="input-group">
+
+                        <label>
+                            Jina lako
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Mfano: Abrahaman"
+                            required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Namba ya Simu
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Mfano: 0617 975 946"
+                            required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Unahitaji taarifa gani?
+                        </label>
+
+                        <select id="service">
+
+                            <option>
+                                Usajili wa mwanafunzi
+                            </option>
+
+                            <option>
+                                Ada
+                            </option>
+
+                            <option>
+                                Ratiba
+                            </option>
+
+                            <option>
+                                Masomo
+                            </option>
+
+                            <option>
+                                Holiday Program
+                            </option>
+
+                            <option>
+                                Taarifa nyingine
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Ujumbe
+                        </label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Andika ujumbe wako hapa..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="send-btn">
+
+                        Tuma Kupitia WhatsApp →
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- LOCATION -->
+
+            <div class="location-box">
+
+                <h2>
+                    Tupate Msaranga
+                </h2>
+
+                <p>
+                    Tunahaki Building – Msaranga Darajani,
+                    Moshi, Kilimanjaro.
+                </p>
+
+
+                <ul class="location-details">
+
+                    <li>
+                        <strong>📍 Eneo:</strong>
+                        Msaranga – Darajani
+                    </li>
+
+                    <li>
+                        <strong>🏢 Jengo:</strong>
+                        Tunahaki Building
+                    </li>
+
+                    <li>
+                        <strong>📞 Simu:</strong>
+                        0617 975 946
+                    </li>
+
+                    <li>
+                        <strong>📚 Level:</strong>
+                        Standard 1 – Form Six
+                    </li>
+
+                </ul>
+
+
+                <!--
+                Badilisha link ya Google Maps
+                hapa chini baada ya kupata
+                location exact ya Golden Path.
+                -->
+
+                <iframe
+                    class="map"
+                    src="https://www.google.com/maps?q=Msaranga,Moshi,Tanzania&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HOURS ================= -->
+
+    <section class="hours">
+
+        <div class="hours-container">
+
+            <h2>
+                Ratiba ya Huduma
+            </h2>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Monday – Friday
+                </span>
+
+                <span>
+                    Asubuhi & Jioni
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Saturday
+                </span>
+
+                <span>
+                    Morning & Afternoon
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Sunday
+                </span>
+
+                <span>
+                    Wasiliana Nasi
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Holiday Program
+                </span>
+
+                <span>
+                    Ratiba Maalumu
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <h2>
+            Usisubiri Mpaka Kesho.
+        </h2>
+
+        <p>
+            Mpe mwanafunzi wako nafasi ya kujifunza,
+            kufanya mazoezi na kujenga msingi wa mafanikio.
+            Wasiliana nasi leo.
+        </p>
+
+        <a
+            href="https://wa.me/255617975946?text=Habari%20Golden%20Path%20Tuition%20Center.%20Nahitaji%20taarifa%20kuhusu%20usajili."
+            class="whatsapp-btn">
+
+            💬 Wasiliana Nasi WhatsApp
+
+        </a>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            GOLDEN <span>PATH</span> TUITION CENTER
+        </h3>
+
+        <p>
+            Tunakuongoza kuelekea mafanikio ya kweli.
+        </p>
+
+        <p>
+            Msaranga – Darajani, Moshi | Tunahaki Building
+        </p>
+
+        <p>
+            0617 975 946
+        </p>
+
+        <p>
+            © 2026 Golden Path Tuition Center.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navLinks")
+                .classList
+                .toggle("active");
+
+        }
+
+
+        function sendWhatsApp() {
+
+            const name =
+                document.getElementById("name").value;
+
+            const phone =
+                document.getElementById("phone").value;
+
+            const service =
+                document.getElementById("service").value;
+
+            const message =
+                document.getElementById("message").value;
+
+
+            const text =
+                "Habari Golden Path Tuition Center.%0A%0A" +
+                "Jina: " + name + "%0A" +
+                "Simu: " + phone + "%0A" +
+                "Nahitaji taarifa kuhusu: " + service + "%0A%0A" +
+                "Ujumbe: " + message;
+
+
+            window.open(
+                "https://wa.me/255617975946?text=" + text,
+                "_blank"
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>

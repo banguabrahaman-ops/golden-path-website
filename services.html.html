@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Huduma Zetu | Golden Path Tuition Center</title>
+
+    <style>
+        /* =========================
+           GENERAL SETTINGS
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        .services-header {
+            background: linear-gradient(135deg, #061a40, #0b2d63);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-header::before {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 193, 7, 0.12);
+            border-radius: 50%;
+            top: -100px;
+            left: -80px;
+        }
+
+        .services-header::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 193, 7, 0.10);
+            border-radius: 50%;
+            bottom: -150px;
+            right: -100px;
+        }
+
+        .services-header h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .services-header h1 span {
+            color: #ffc107;
+        }
+
+        .services-header p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            color: #e7edf7;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gold-line {
+            width: 90px;
+            height: 4px;
+            background: #ffc107;
+            margin: 20px auto;
+            border-radius: 20px;
+        }
+
+        /* =========================
+           SERVICES SECTION
+        ========================== */
+
+        .services-section {
+            padding: 70px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: #061a40;
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* =========================
+           SERVICES GRID
+        ========================== */
+
+        .services-grid {
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* =========================
+           SERVICE CARD
+        ========================== */
+
+        .service-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 18px;
+            border: 1px solid #e5e9f2;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+            text-align: center;
+
+            transition: all 0.35s ease;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #ffc107;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 40px rgba(6, 26, 64, 0.15);
+            border-color: #ffc107;
+        }
+
+        /* =========================
+           ICON
+        ========================== */
+
+        .icon {
+            width: 75px;
+            height: 75px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #fff7dc;
+            border-radius: 50%;
+
+            font-size: 36px;
+
+            transition: all 0.35s ease;
+        }
+
+        .service-card:hover .icon {
+            background: #ffc107;
+            transform: rotate(8deg) scale(1.08);
+        }
+
+        /* =========================
+           CARD TEXT
+        ========================== */
+
+        .service-card h3 {
+            color: #061a40;
+            font-size: 21px;
+            margin-bottom: 14px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* =========================
+           CTA
+        ========================== */
+
+        .services-cta {
+            margin-top: 65px;
+            background: linear-gradient(135deg, #061a40, #0d3675);
+            border-radius: 25px;
+            padding: 50px 25px;
+            text-align: center;
+            color: white;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-cta::before {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 193, 7, 0.12);
+            border-radius: 50%;
+            top: -100px;
+            right: -50px;
+        }
+
+        .services-cta h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .services-cta p {
+            color: #e5ebf5;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button {
+            display: inline-block;
+            text-decoration: none;
+            background: #ffc107;
+            color: #061a40;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #04132f;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 60px;
+        }
+
+        footer span {
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        /* =========================
+           TABLET
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-header h1 {
+                font-size: 38px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 650px) {
+
+            .services-header {
+                padding: 55px 18px;
+            }
+
+            .services-header h1 {
+                font-size: 32px;
+            }
+
+            .services-header p {
+                font-size: 16px;
+            }
+
+            .services-section {
+                padding: 50px 18px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-card {
+                padding: 28px 22px;
+            }
+
+            .services-cta {
+                padding: 40px 20px;
+                border-radius: 18px;
+            }
+
+            .services-cta h2 {
+                font-size: 26px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="services-header">
+
+        <h1>
+            Huduma Zetu za <span>Elimu</span>
+        </h1>
+
+        <div class="gold-line"></div>
+       </nav>
+    <a href="index.html" class="logo">GOLDEN PATH</a>
+
+    <ul class="nav-links">
+        <li><a href="index.html.html">Home</a></li>
+        <li><a href="about.html.html">About Us</a></li>
+        <li><a href="services.html.html">Our Services</a></li>
+        <li><a href="videos.html.html">Videos</a></li>
+        <li><a href="contact.html.html">Mawasiliano</a></li>
+    </ul>
+</nav>
+        <p>
+            Golden Path Tuition Center tunakuongoza kuelekea mafanikio
+            ya kweli kupitia programu bora za elimu, maandalizi ya mitihani
+            na ufuatiliaji wa maendeleo ya mwanafunzi.
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="services-section">
+
+        <div class="section-title">
+
+            <h2>Programu Tunazotoa</h2>
+
+            <p>
+                Chagua programu inayofaa kwa mahitaji ya mwanafunzi wako
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <!-- CHEKECHEA -->
+
+            <div class="service-card">
+
+                <div class="icon">🧒</div>
+
+                <h3>Chekechea</h3>
+
+                <p>
+                    Tunawasaidia watoto kujenga msingi mzuri wa kusoma,
+                    kuandika, kuhesabu na kujifunza katika mazingira
+                    rafiki na yenye kuwajenga.
+                </p>
+
+            </div>
+
+
+            <!-- PRE FORM ONE -->
+
+            <div class="service-card">
+
+                <div class="icon">🎒</div>
+
+                <h3>Pre-Form One</h3>
+
+                <p>
+                    Programu maalumu kwa wanafunzi wanaojiandaa kuingia
+                    Form One, ikiwaandaa kitaaluma na kuwajenga kujiamini
+                    kabla ya kuanza sekondari.
+                </p>
+
+            </div>
+
+
+            <!-- PRIMARY -->
+
+            <div class="service-card">
+
+                <div class="icon">📚</div>
+
+                <h3>Primary Tuition</h3>
+
+                <p>
+                    Masomo ya ziada kwa Standard One hadi Standard Seven,
+                    pamoja na revision, mazoezi na ufuatiliaji wa maendeleo
+                    ya mwanafunzi.
+                </p>
+
+            </div>
+
+
+            <!-- SECONDARY -->
+
+            <div class="service-card">
+
+                <div class="icon">🎓</div>
+
+                <h3>Secondary Tuition</h3>
+
+                <p>
+                    Form One hadi Form Four kwa ajili ya kuongeza uelewa,
+                    kufanya mazoezi na maandalizi ya mitihani.
+                </p>
+
+            </div>
+
+
+         
+
+            <!-- REPEATERS -->
+
+            <div class="service-card">
+
+                <div class="icon">📝</div>
+
+                <h3>Repeaters / Resitters</h3>
+
+                <p>
+                    Tunatoa maandalizi maalumu kwa wanafunzi wanaorudia
+                    kufanya mitihani. Tunazingatia maeneo yenye changamoto,
+                    revision na mazoezi ya mitihani.
+                </p>
+
+            </div>
+
+
+            <!-- EXAMINATION SUPPORT -->
+
+            <div class="service-card">
+
+                <div class="icon">📍</div>
+
+                <h3>Examination Centre Support</h3>
+
+                <p>
+                    Kwa wanafunzi wanaohitaji taarifa na mwongozo kuhusu
+                    vituo vya kufanya mitihani, tunawasaidia kuelewa
+                    taratibu na hatua zinazohitajika.
+                </p>
+
+            </div>
+
+
+            <!-- HOLIDAY -->
+
+            <div class="service-card">
+
+                <div class="icon">☀️</div>
+
+                <h3>Holiday Program</h3>
+
+                <p>
+                    Programu za likizo zinazomsaidia mwanafunzi kutumia
+                    muda wake vizuri kupitia masomo, revision na mazoezi.
+                </p>
+
+            </div>
+
+
+            <!-- MORNING -->
+
+            <div class="service-card">
+
+                <div class="icon">🌅</div>
+
+                <h3>Morning Prep</h3>
+
+                <p>
+                    Maandalizi ya asubuhi kwa wanafunzi wanaohitaji muda
+                    wa ziada wa kusoma na kufanya mazoezi.
+                </p>
+
+            </div>
+
+
+            <!-- EVENING -->
+
+            <div class="service-card">
+
+                <div class="icon">🌙</div>
+
+                <h3>Evening Prep</h3>
+
+                <p>
+                    Homework, revision na mazoezi ya jioni katika mazingira
+                    yanayomsaidia mwanafunzi kuongeza uelewa.
+                </p>
+
+            </div>
+
+
+            <!-- GUIDANCE -->
+
+            <div class="service-card">
+
+                <div class="icon">🎯</div>
+
+                <h3>Student Guidance</h3>
+
+                <p>
+                    Tunawasaidia wanafunzi kujenga nidhamu, kujiamini,
+                    kuweka malengo na kuwa na mtazamo chanya kuhusu elimu.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             CALL TO ACTION
+        ========================== -->
+
+        <div class="services-cta">
+
+            <h2>
+                Mwanao Anahitaji Mwanzo Bora?
+            </h2>
+
+            <p>
+                Jiunge na Golden Path Tuition Center leo na tumsaidie
+                mwanao kufikia uwezo wake wa juu kitaaluma.
+            </p>
+
+            <a href="contact.html" class="cta-button">
+                Wasiliana Nasi
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 <span>Golden Path Tuition Center</span>.
+            Tunakuongoza kuelekea mafanikio ya kweli.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

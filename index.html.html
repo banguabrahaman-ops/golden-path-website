@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Golden Path Tuition Center | Msaranga, Moshi</title>
+
+    <meta name="description" content="Golden Path Tuition Center - Msaranga Darajani, Moshi. Tunakuongoza kuelekea mafanikio ya kweli.">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<
+    <!-- ================= CSS IPO HAPA HAPA ================= -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #172033;
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        :root {
+            --navy: #071b3a;
+            --navy2: #0d3265;
+            --gold: #f4b942;
+            --gold2: #ffd86b;
+            --white: #ffffff;
+            --light: #f5f8fc;
+            --gray: #64748b;
+            --dark: #111827;
+        }
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Poppins", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 27, 58, 0.97);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+        }
+
+        .nav-content {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            color: white;
+        }
+
+        .logo-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            color: var(--navy);
+            font-weight: 900;
+            font-family: Poppins;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            line-height: 1.1;
+        }
+
+        .logo span {
+            font-size: 10px;
+            color: #cdd8e8;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #e7edf6;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .nav-btn {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 13px;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 680px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    rgba(4,19,42,.95),
+                    rgba(7,27,58,.76),
+                    rgba(7,27,58,.88)
+                );
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: rgba(244,185,66,.08);
+            right: -150px;
+            top: -150px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(244,185,66,.06);
+            left: -100px;
+            bottom: -120px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            max-width: 780px;
+            color: white;
+        }
+
+        .location {
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,.25);
+            background: rgba(255,255,255,.08);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(43px, 6vw, 72px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+            display: block;
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: #d9e3f0;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 14px 25px;
+            border-radius: 9px;
+            font-weight: 900;
+            transition: .3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(244,185,66,.25);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,.4);
+            color: white;
+            padding: 14px 25px;
+            border-radius: 9px;
+            font-weight: 700;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--navy);
+        }
+
+        .trust {
+            margin-top: 25px;
+            color: #bfcde0;
+            font-size: 13px;
+        }
+
+
+        /* ================= STATS ================= */
+
+        .stats {
+            margin-top: -45px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(7,27,58,.13);
+        }
+
+        .stat {
+            text-align: center;
+            padding: 25px 15px;
+            border-right: 1px solid #edf0f5;
+        }
+
+        .stat:last-child {
+            border: none;
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--navy);
+            font-size: 27px;
+            font-family: Poppins;
+        }
+
+        .stat span {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-visual {
+            min-height: 450px;
+            border-radius: 22px;
+            background: linear-gradient(
+                145deg,
+                #071b3a,
+                #174477
+            );
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 25px;
+        }
+
+        .about-visual::before {
+            content: "GOLDEN PATH";
+            position: absolute;
+            top: 55px;
+            left: 30px;
+            color: rgba(255,255,255,.07);
+            font-size: 55px;
+            font-weight: 900;
+        }
+
+        .building {
+            width: 100%;
+            background: rgba(255,255,255,.96);
+            border-radius: 14px;
+            padding: 22px;
+            position: relative;
+        }
+
+        .building-icon {
+            font-size: 35px;
+        }
+
+        .building h3 {
+            color: var(--navy);
+        }
+
+        .building p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .label {
+            color: #d79513;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .about-text h2 {
+            font-size: clamp(32px,4vw,48px);
+            line-height: 1.15;
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+
+        .about-text h2 span {
+            color: #d79513;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 16px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px;
+            margin-top: 25px;
+        }
+
+        .feature {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .feature b {
+            color: #d79513;
+            margin-right: 5px;
+        }
+
+
+        /* ================= PROGRAMS ================= */
+
+        .programs {
+            background: var(--light);
+        }
+
+        .heading {
+            text-align: center;
+            max-width: 720px;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+
+        .heading h2 {
+            font-size: clamp(32px,4vw,48px);
+            color: var(--navy);
+            line-height: 1.15;
+        }
+
+        .heading h2 span {
+            color: #d79513;
+        }
+
+        .heading p {
+            color: var(--gray);
+            margin-top: 14px;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .program {
+            background: white;
+            padding: 30px 24px;
+            border-radius: 16px;
+            border: 1px solid #e7edf5;
+            transition: .3s;
+            position: relative;
+        }
+
+        .program:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(7,27,58,.1);
+        }
+
+        .program.featured {
+            background: var(--navy);
+            color: white;
+        }
+
+        .program-icon {
+            font-size: 35px;
+            margin-bottom: 17px;
+        }
+
+        .program h3 {
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .program.featured h3 {
+            color: white;
+        }
+
+        .program p {
+            color: var(--gray);
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .program.featured p {
+            color: #cbd7e7;
+        }
+
+        .program a {
+            color: #d79513;
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+        .popular {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 8px;
+            font-weight: 900;
+        }
+
+
+        /* ================= WHY US ================= */
+
+        .why {
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .why h2 {
+            font-size: clamp(32px,4vw,48px);
+            color: var(--navy);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .why h2 span {
+            color: #d79513;
+        }
+
+        .why > .container > .why-grid > div > p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .why-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 17px;
+        }
+
+        .why-card {
+            padding: 22px;
+            border: 1px solid #e6ebf2;
+            border-radius: 14px;
+        }
+
+        .why-card-number {
+            color: var(--gold);
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        .why-card h3 {
+            color: var(--navy);
+            font-size: 16px;
+        }
+
+        .why-card p {
+            color: var(--gray);
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+
+        /* ================= CTA ================= */
+
+        .cta {
+            background: linear-gradient(120deg,#071b3a,#0e376c);
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta .container {
+            max-width: 800px;
+        }
+
+        .cta-label {
+            color: var(--gold);
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: 900;
+        }
+
+        .cta h2 {
+            font-size: clamp(34px,5vw,55px);
+            line-height: 1.15;
+            margin: 18px 0;
+        }
+
+        .cta h2 span {
+            color: var(--gold);
+        }
+
+        .cta p {
+            color: #d1ddec;
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= SUBJECTS ================= */
+
+        .subjects {
+            background: white;
+        }
+
+        .subjects-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .subject {
+            padding: 11px 18px;
+            background: #f3f6fa;
+            border: 1px solid #e3e9f1;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr .75fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            color: var(--navy);
+            font-size: clamp(32px,4vw,48px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2 span {
+            color: #d79513;
+        }
+
+        .contact-info > p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,.05);
+        }
+
+        .contact-item strong {
+            color: var(--navy);
+        }
+
+        .contact-item p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .contact-box {
+            background: var(--navy);
+            padding: 40px;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 20px 50px rgba(7,27,58,.2);
+        }
+
+        .contact-box h3 {
+            font-size: 27px;
+        }
+
+        .contact-box p {
+            color: #c5d3e5;
+            font-size: 14px;
+            margin: 8px 0 22px;
+        }
+
+        .contact-btn {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-weight: 900;
+        }
+
+        .whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .call {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .mini {
+            text-align: center;
+            color: #9eb1ca;
+            font-size: 11px;
+            margin-top: 22px;
+        }
+
+        .mini strong {
+            color: var(--gold);
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #041126;
+            color: white;
+        }
+
+        .footer {
+            padding: 45px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer h3 {
+            margin-bottom: 7px;
+        }
+
+        .footer p {
+            color: #a9b9cf;
+            font-size: 13px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,.08);
+            padding: 18px;
+            color: #8496ae;
+            font-size: 11px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width:900px) {
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 78px;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                padding: 20px;
+                flex-direction: column;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-btn {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .program-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-grid,
+            .why-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media(max-width:600px) {
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .stats {
+                margin-top: -30px;
+            }
+
+            .stat {
+                padding: 20px 8px;
+            }
+
+            .stat strong {
+                font-size: 20px;
+            }
+
+            .program-grid,
+            .features,
+            .why-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .about-visual {
+                min-height: 350px;
+            }
+
+            .contact-box {
+                padding: 30px 22px;
+            }
+
+            .footer {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-content">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    GP
+                </div>
+
+                <div>
+                    <h2>Golden Path</h2>
+                    <span>TUITION CENTER</span>
+                </div>
+
+            </div>
+
+
+            <nav id="nav">
+
+                <a href="#home">Home</a>
+                <a href="#about">Kuhusu Sisi</a>
+                <a href="#programs">Programu</a>
+                <a href="#why">Kwa Nini Sisi?</a>
+                <a href="#contact">Mawasiliano</a>
+
+            </nav>
+             <nav>
+    <a href="index.html" class="logo">GOLDEN PATH</a>
+
+    <ul class="nav-links">
+        <li><a href="index.html.html">Home</a></li>
+        <li><a href="about.html.html">About Us</a></li>
+        <li><a href="services.html.html">Our Services</a></li>
+        <li><a href="videos.html.html">Videos</a></li>
+        <li><a href="contact.html.html">Mawasiliano</a></li>
+    </ul>
+</nav>
+
+            <a href="#contact" class="nav-btn">
+                Jisajili Sasa
+            </a>
+
+
+            <button class="menu-btn" onclick="menu()">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <div class="location">
+                    📍 Msaranga – Darajani, Moshi
+                </div>
+
+                <h1>
+                    Mjengee Mtoto Wako
+                    <span>Kesho Bora Leo.</span>
+                </h1>
+
+                <p>
+                    Karibu Golden Path Tuition Center — mahali ambapo
+                    mwanafunzi hapati tu masomo, bali anapata
+                    mwongozo, nidhamu, kujiamini na msingi wa
+                    kufikia mafanikio ya kweli.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#contact" class="btn-primary">
+                        🚀 Jiunge Nasi
+                    </a>
+
+                    <a href="#programs" class="btn-secondary">
+                        Angalia Programu →
+                    </a>
+
+                </div>
+
+
+                <div class="trust">
+                    ✓ Standard 1 – Form 6
+                    &nbsp;&nbsp; ✓ Walimu Wenye Uzoefu
+                    &nbsp;&nbsp; ✓ Mazingira Rafiki
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div class="container stats-grid">
+
+            <div class="stat">
+                <strong>01–06</strong>
+                <span>Primary & Secondary</span>
+            </div>
+
+            <div class="stat">
+                <strong>✓</strong>
+                <span>Ufuatiliaji wa Mwanafunzi</span>
+            </div>
+
+            <div class="stat">
+                <strong>📚</strong>
+                <span>Masomo Mbalimbali</span>
+            </div>
+
+            <div class="stat">
+                <strong>📍</strong>
+                <span>Msaranga, Moshi</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about section" id="about">
+
+        <div class="container about-grid">
+
+
+            <div class="about-visual">
+
+                <div class="building">
+
+                    <div class="building-icon">
+                        🏫
+                    </div>
+
+                    <h3>
+                        Tunahaki Building
+                    </h3>
+
+                    <p>
+                        Msaranga – Darajani, Moshi
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <span class="label">
+                    KUHUSU GOLDEN PATH
+                </span>
+
+                <h2>
+                    Mahali ambapo
+                    <span>ndoto za kielimu</span>
+                    hupewa mwelekeo.
+                </h2>
+
+                <p>
+                    Golden Path Tuition Center ni kituo cha
+                    kujifunzia kinacholenga kumsaidia mwanafunzi
+                    kuongeza uelewa, kujiamini na kufanya vizuri
+                    zaidi katika masomo yake.
+                </p>
+
+                <p>
+                    Tunapatikana <strong>Msaranga – Darajani,
+                    ndani ya Tunahaki Building</strong>, Moshi.
+                    Tunajenga mazingira ambayo mwanafunzi anaweza
+                    kuuliza, kufanya mazoezi na kujifunza kwa uhuru.
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        <b>✓</b> Ufuatiliaji wa mwanafunzi
+                    </div>
+
+                    <div class="feature">
+                        <b>✓</b> Maandalizi ya mitihani
+                    </div>
+
+                    <div class="feature">
+                        <b>✓</b> Morning & Evening Prep
+                    </div>
+
+                    <div class="feature">
+                        <b>✓</b> Mazingira rafiki
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PROGRAMS ================= -->
+
+    <section class="programs section" id="programs">
+
+        <div class="container">
+
+            <div class="heading">
+
+                <span class="label">
+                    PROGRAMU ZETU
+                </span>
+
+                <h2>
+                    Tunamjenga mwanafunzi
+                    <span>kwa hatua.</span>
+                </h2>
+
+                <p>
+                    Programu zinazolenga kuongeza uelewa,
+                    uwezo na kujiamini kwa mwanafunzi.
+                </p>
+
+            </div>
+
+
+            <div class="program-grid">
+
+
+                <div class="program">
+
+                    <div class="program-icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        Primary Tuition
+                    </h3>
+
+                    <p>
+                        Kwa wanafunzi wa Standard One hadi
+                        Standard Seven. Tunajenga msingi imara
+                        wa elimu.
+                    </p>
+
+                    <a href="#contact">
+                        Jiunge sasa →
+                    </a>
+
+                </div>
+
+
+
+                <div class="program featured">
+
+                    <div class="popular">
+                        POPULAR
+                    </div>
+
+                    <div class="program-icon">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Secondary Tuition
+                    </h3>
+
+                    <p>
+                        Mafunzo yanayolenga uelewa wa dhana,
+                        mazoezi na maandalizi ya mitihani.
+                    </p>
+
+                    <a href="#contact">
+                        Jiunge sasa →
+                    </a>
+
+                </div>
+
+
+
+                <div class="program">
+
+                    <div class="program-icon">
+                        ⏰
+                    </div>
+
+                    <h3>
+                        Prep Classes
+                    </h3>
+
+                    <p>
+                        Morning na Evening Prep kwa
+                        mwanafunzi anayehitaji muda zaidi
+                        wa kujifunza.
+                    </p>
+
+                    <a href="#contact">
+                        Jifunze zaidi →
+                    </a>
+
+                </div>
+
+
+
+                <div class="program">
+
+                    <div class="program-icon">
+                        🏆
+                    </div>
+
+                    <h3>
+                        Exam Preparation
+                    </h3>
+
+                    <p>
+                        Mazoezi, past papers na maandalizi
+                        maalum kwa wanafunzi wa mitihani.
+                    </p>
+
+                    <a href="#contact">
+                        Jiunge sasa →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WHY US ================= -->
+
+    <section class="why section" id="why">
+
+        <div class="container why-grid">
+
+
+            <div>
+
+                <span class="label">
+                    KWA NINI GOLDEN PATH?
+                </span>
+
+                <h2>
+                    Hatufundishi tu masomo.
+                    <span>Tunajenga uwezo.</span>
+                </h2>
+
+                <p>
+                    Tunataka kila mwanafunzi anayeingia Golden
+                    Path atoke akiwa na uelewa zaidi, kujiamini
+                    zaidi na kuwa tayari kwa hatua inayofuata.
+                </p>
+
+                <a href="#contact" class="btn-primary">
+                    Mlete Mtoto Wako →
+                </a>
+
+            </div>
+
+
+            <div class="why-cards">
+
+
+                <div class="why-card">
+
+                    <div class="why-card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Walimu Wenye Kujali
+                    </h3>
+
+                    <p>
+                        Tunazingatia changamoto na uwezo
+                        wa kila mwanafunzi.
+                    </p>
+
+                </div>
+
+
+
+                <div class="why-card">
+
+                    <div class="why-card-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Ufuatiliaji
+                    </h3>
+
+                    <p>
+                        Tunahamasisha mazoezi na ufuatiliaji
+                        wa maendeleo.
+                    </p>
+
+                </div>
+
+
+
+                <div class="why-card">
+
+                    <div class="why-card-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Mazingira Rafiki
+                    </h3>
+
+                    <p>
+                        Mazingira yanayomsaidia mwanafunzi
+                        kuzingatia masomo.
+                    </p>
+
+                </div>
+
+
+
+                <div class="why-card">
+
+                    <div class="why-card-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Focus kwenye Matokeo
+                    </h3>
+
+                    <p>
+                        Tunajenga uelewa na uwezo wa
+                        mwanafunzi kufanya vizuri.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-label">
+                USIACHE LIKIZO IPITE BURE!
+            </div>
+
+            <h2>
+                Muda wa mtoto wako ni
+                <span>uwekezaji, si mchezo.</span>
+            </h2>
+
+            <p>
+                Badala ya muda mwingi kuishia kwenye TV,
+                simu na michezo, mpe mtoto wako nafasi ya
+                kuongeza maarifa, kujenga nidhamu ya kujifunza
+                na kujiandaa kwa hatua inayofuata.
+            </p>
+
+            <a href="#contact" class="btn-primary">
+                📞 Wasiliana Nasi Leo
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SUBJECTS ================= -->
+
+    <section class="subjects section">
+
+        <div class="container">
+
+            <div class="heading">
+
+                <span class="label">
+                    MASOMO
+                </span>
+
+                <h2>
+                    Maarifa yanayojenga
+                    <span>msingi wa mafanikio.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="subjects-list">
+
+                <span class="subject">Mathematics</span>
+                <span class="subject">English</span>
+                <span class="subject">Kiswahili</span>
+                <span class="subject">Science</span>
+                <span class="subject">Geography</span>
+                <span class="subject">Biology</span>
+                <span class="subject">Chemistry</span>
+                <span class="subject">Physics</span>
+                <span class="subject">History</span>
+                <span class="subject">Bookkeeping</span>
+                <span class="subject">Business Studies</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact section" id="contact">
+
+        <div class="container contact-grid">
+
+
+            <div class="contact-info">
+
+                <span class="label">
+                    WASILIANA NASI
+                </span>
+
+                <h2>
+                    Hatua ya kwanza ya
+                    <span>mafanikio inaanza leo.</span>
+                </h2>
+
+                <p>
+                    Usisubiri mtoto wako aanze kupata changamoto
+                    ndipo uchukue hatua. Wasiliana nasi leo.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+                        <strong>
+                            Mahali Tulipo
+                        </strong>
+
+                        <p>
+                            Msaranga – Darajani,
+                            Tunahaki Building, Moshi
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <div>
+                        <strong>
+                            Simu
+                        </strong>
+
+                        <p>
+                            0617 975 946
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        👨‍🏫
+                    </div>
+
+                    <div>
+                        <strong>
+                            Uongozi
+                        </strong>
+
+                        <p>
+                            Mr David – Director
+                        </p>
+
+                        <p>
+                            Abrahaman Issa – Assistant Director
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-box">
+
+                <h3>
+                    Mtoto wako yuko tayari?
+                </h3>
+
+                <p>
+                    Wasiliana nasi leo kwa taarifa
+                    za usajili na programu zetu.
+                </p>
+
+
+                <a
+                    href="https://wa.me/255617975946"
+                    target="_blank"
+                    class="contact-btn whatsapp">
+
+                    💬 Tuma WhatsApp
+
+                </a>
+
+
+                <a
+                    href="tel:+255617975946"
+                    class="contact-btn call">
+
+                    📞 Piga Simu
+
+                </a>
+
+
+                <div class="mini">
+
+                    Golden Path Tuition Center
+
+                    <br>
+
+                    <strong>
+                        Tunakuongoza kuelekea mafanikio ya kweli.
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container footer">
+
+            <div>
+
+                <h3>
+                    Golden Path Tuition Center
+                </h3>
+
+                <p>
+                    Tunakuongoza kuelekea mafanikio ya kweli.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    📍 Msaranga – Darajani, Moshi
+                </p>
+
+                <p>
+                    📞 0617 975 946
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Golden Path Tuition Center.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function menu() {
+
+            document
+                .getElementById("nav")
+                .classList.toggle("active");
+
+        }
+
+    </script>
+
+
+</body>
+</html>

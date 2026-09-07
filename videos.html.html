@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video | Golden Path Tuition Center</title>
+
+    <meta name="description"
+        content="Tazama maisha halisi ya Golden Path Tuition Center Msaranga, Darajani, Moshi.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f6f7fa;
+            color: #172033;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(6, 20, 43, .97);
+            backdrop-filter: blur(12px);
+
+            padding: 16px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #f4bd3f;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #f4bd3f;
+        }
+
+        .menu-btn {
+            display: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 520px;
+
+            background:
+                linear-gradient(
+                    rgba(4, 17, 37, .88),
+                    rgba(4, 17, 37, .94)
+                ),
+                url("images/golden-path.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+
+            padding: 80px 7%;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            color: white;
+        }
+
+        .label {
+            color: #f4bd3f;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(40px, 6vw, 70px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #f4bd3f;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 18px;
+            color: #dce3ee;
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 14px 26px;
+
+            background: #f4bd3f;
+            color: #071a38;
+
+            text-decoration: none;
+            font-weight: 800;
+
+            border-radius: 8px;
+
+            transition: .3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            background: white;
+        }
+
+
+        /* ================= INTRO ================= */
+
+        .intro {
+            background: white;
+            padding: 80px 7%;
+            text-align: center;
+        }
+
+        .intro h2 {
+            font-family: "Poppins", sans-serif;
+            color: #081b3a;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 750px;
+            margin: auto;
+            color: #687386;
+        }
+
+
+        /* ================= VIDEO SECTION ================= */
+
+        .videos {
+            padding: 80px 7%;
+            background: #f6f7fa;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 38px;
+            color: #081b3a;
+        }
+
+        .section-heading p {
+            color: #687386;
+            margin-top: 8px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+
+            border: 1px solid #e5e8ed;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,.05);
+
+            transition: .3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(0,0,0,.12);
+        }
+
+        .video-container {
+            position: relative;
+            background: #071a38;
+        }
+
+        video {
+            width: 100%;
+            height: 310px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .video-info {
+            padding: 25px;
+        }
+
+        .video-info h3 {
+            font-family: "Poppins", sans-serif;
+            color: #081b3a;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .video-info p {
+            color: #687386;
+            font-size: 14px;
+        }
+
+
+        /* ================= BIG VIDEO ================= */
+
+        .featured {
+            padding: 90px 7%;
+            background: #081b3a;
+            color: white;
+        }
+
+        .featured-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .featured-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .featured-heading h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 38px;
+        }
+
+        .featured-heading p {
+            color: #cbd4e0;
+        }
+
+        .featured-video {
+            background: #000;
+            border-radius: 20px;
+            overflow: hidden;
+
+            box-shadow: 0 25px 60px rgba(0,0,0,.35);
+        }
+
+        .featured-video video {
+            height: 550px;
+        }
+
+
+        /* ================= REAL LIFE ================= */
+
+        .real-life {
+            padding: 90px 7%;
+            background: white;
+        }
+
+        .real-container {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .real-text h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 38px;
+            color: #081b3a;
+            margin-bottom: 18px;
+        }
+
+        .real-text p {
+            color: #687386;
+            margin-bottom: 18px;
+        }
+
+        .real-list {
+            list-style: none;
+        }
+
+        .real-list li {
+            margin: 13px 0;
+            font-weight: 600;
+        }
+
+        .real-list li::before {
+            content: "✓";
+            color: #c28b0e;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        .real-box {
+            background: #f4bd3f;
+            padding: 45px;
+            border-radius: 20px;
+        }
+
+        .real-box h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 28px;
+            color: #071a38;
+            margin-bottom: 15px;
+        }
+
+        .real-box p {
+            color: #172033;
+        }
+
+
+        /* ================= CTA ================= */
+
+        .cta {
+            padding: 80px 7%;
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f4bd3f,
+                    #e5a91e
+                );
+        }
+
+        .cta h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 40px;
+            color: #071a38;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: auto auto 25px;
+            color: #172033;
+        }
+
+        .cta-btn {
+            display: inline-block;
+
+            background: #081b3a;
+            color: white;
+
+            padding: 14px 28px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+            font-weight: 800;
+
+            transition: .3s;
+        }
+
+        .cta-btn:hover {
+            background: white;
+            color: #081b3a;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #050f20;
+            color: white;
+            text-align: center;
+            padding: 45px 7%;
+        }
+
+        footer h3 {
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 8px;
+        }
+
+        footer span {
+            color: #f4bd3f;
+        }
+
+        footer p {
+            color: #aeb8c7;
+            font-size: 14px;
+            margin: 4px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 850px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+                top: 70px;
+                left: 0;
+
+                width: 100%;
+
+                background: #081b3a;
+
+                flex-direction: column;
+
+                padding: 25px 7%;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .real-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 580px;
+            }
+
+            .featured-video video {
+                height: 300px;
+            }
+
+            .intro h2,
+            .section-heading h2,
+            .featured-heading h2,
+            .real-text h2,
+            .cta h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+            
+    </nav>
+    <a href="index.html" class="logo">GOLDEN PATH</a>
+
+    <ul class="nav-links">
+        <li><a href="index.html.html">Home</a></li>
+        <li><a href="about.html.html">About Us</a></li>
+        <li><a href="services.html.html">Our Services</a></li>
+        <li><a href="videos.html.html">Videos</a></li>
+        <li><a href="contact.html.html">Mawasiliano</a></li>
+    </ul>
+</nav>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="label">
+                Golden Path In Action
+            </div>
+
+            <h1>
+                Tazama
+                <span>Golden Path</span>
+                kwa vitendo.
+            </h1>
+
+            <p>
+                Karibu uone mazingira yetu halisi ya kujifunza,
+                walimu wakifundisha, wanafunzi wakifanya mazoezi
+                na maisha ya kila siku ndani ya Golden Path Tuition Center.
+            </p>
+
+            <a href="#videos" class="hero-btn">
+                Tazama Video ↓
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= INTRO ================= -->
+
+    <section class="intro">
+
+        <div class="label">
+            Real Tuition. Real Students. Real Progress.
+        </div>
+
+        <h2>
+            Hapa Unaona Kile Tunachofanya
+        </h2>
+
+        <p>
+            Hatutaki kukuambia tu kuhusu Golden Path.
+            Tunataka pia kukuonyesha. Kupitia video hizi,
+            utaweza kuona mazingira ya tuition, namna tunavyofundisha
+            na namna wanafunzi wanavyoshiriki katika kujifunza.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= VIDEOS ================= -->
+
+    <section class="videos" id="videos">
+
+        <div class="section-heading">
+
+            <div class="label">
+                Our Videos
+            </div>
+
+            <h2>
+                Maisha ya Golden Path
+            </h2>
+
+            <p>
+                Angalia baadhi ya shughuli zinazofanyika kila siku.
+            </p>
+
+        </div>
+
+
+        <div class="video-grid">
+
+
+            <!-- VIDEO 1 -->
+
+            <div class="video-card">
+
+                <div class="video-container">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="videos/tution-class.mp4"
+                            type="video/mp4">
+
+                        Browser yako haiwezi kucheza video hii.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        Darasa la Golden Path
+                    </h3>
+
+                    <p>
+                        Wanafunzi wakishiriki katika kipindi
+                        cha kawaida cha tuition.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VIDEO 2 -->
+
+            <div class="video-card">
+
+                <div class="video-container">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="videos/teacher-teaching.mp4"
+                            type="video/mp4">
+
+                        Browser yako haiwezi kucheza video hii.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        Mwalimu Akifundisha
+                    </h3>
+
+                    <p>
+                        Kipindi cha ufundishaji na maelezo
+                        ya mwalimu kwa wanafunzi.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VIDEO 3 -->
+
+            <div class="video-card">
+
+                <div class="video-container">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="videos/student-discussion.mp4"
+                            type="video/mp4">
+
+                        Browser yako haiwezi kucheza video hii.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        Student Discussion
+                    </h3>
+
+                    <p>
+                        Wanafunzi wakijadiliana na kusaidiana
+                        kuelewa masomo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VIDEO 4 -->
+
+            <div class="video-card">
+
+                <div class="video-container">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="videos/golden-path-life.mp4"
+                            type="video/mp4">
+
+                        Browser yako haiwezi kucheza video hii.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        Life at Golden Path
+                    </h3>
+
+                    <p>
+                        Muonekano wa shughuli na mazingira
+                        ya kawaida ndani ya Golden Path.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FEATURED VIDEO ================= -->
+
+    <section class="featured">
+
+        <div class="featured-container">
+
+            <div class="featured-heading">
+
+                <div class="label">
+                    Featured Video
+                </div>
+
+                <h2>
+                    Kwa Nini Golden Path?
+                </h2>
+
+                <p>
+                    Video maalumu ya kuonyesha kile kinachotufanya
+                    tuwe sehemu ya safari ya mafanikio ya mwanafunzi.
+                </p>
+
+            </div>
+
+
+            <div class="featured-video">
+
+                <video controls poster="images/video-cover.jpg">
+
+                    <source
+                        src="videos/golden-path-main.mp4"
+                        type="video/mp4">
+
+                    Browser yako haiwezi kucheza video hii.
+
+                </video>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= REAL LIFE ================= -->
+
+    <section class="real-life">
+
+        <div class="real-container">
+
+
+            <div class="real-text">
+
+                <div class="label">
+                    Our Environment
+                </div>
+
+                <h2>
+                    Mazingira Halisi.
+                    Kujifunza Halisi.
+                </h2>
+
+                <p>
+                    Golden Path ipo Msaranga – Darajani,
+                    katika Tunahaki Building. Tunazingatia
+                    mazingira ambayo mwanafunzi anajisikia huru
+                    kujifunza, kuuliza maswali na kushirikiana.
+                </p>
+
+                <ul class="real-list">
+
+                    <li>
+                        Wanafunzi huvaa mavazi ya kawaida na nadhifu
+                    </li>
+
+                    <li>
+                        Mazingira ya kawaida ya tuition
+                    </li>
+
+                    <li>
+                        Ushirikiano kati ya walimu na wanafunzi
+                    </li>
+
+                    <li>
+                        Mazoezi na revision
+                    </li>
+
+                    <li>
+                        Kujenga kujiamini kwa mwanafunzi
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="real-box">
+
+                <h3>
+                    “Tunakuongoza kuelekea mafanikio ya kweli.”
+                </h3>
+
+                <p>
+                    Kila kipindi ni hatua nyingine kuelekea
+                    kwenye malengo ya mwanafunzi.
+                    Tunajenga siyo alama pekee,
+                    bali mwanafunzi mwenye uwezo,
+                    nidhamu na kujiamini.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <h2>
+            Unataka Mtoto Wako Awe Sehemu ya Hii?
+        </h2>
+
+        <p>
+            Wasiliana nasi leo kwa taarifa za usajili,
+            ratiba na programu zinazopatikana Golden Path Tuition Center.
+        </p>
+
+        <a
+            href="https://wa.me/255617975946"
+            class="cta-btn">
+
+            Wasiliana Nasi WhatsApp
+
+        </a>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            GOLDEN <span>PATH</span> TUITION CENTER
+        </h3>
+
+        <p>
+            Tunakuongoza kuelekea mafanikio ya kweli.
+        </p>
+
+        <p>
+            Msaranga – Darajani, Moshi | Tunahaki Building
+        </p>
+
+        <p>
+            0617 975 946
+        </p>
+
+        <p>
+            © 2026 Golden Path Tuition Center
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navLinks")
+                .classList
+                .toggle("active");
+
+        }
+
+    </script>
+
+</body>
+</html>
